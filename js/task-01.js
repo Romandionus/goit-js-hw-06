@@ -43,7 +43,7 @@ console.log(`Number of categories:`, liItem.length);
 // console.log(liElemUl[1].nextElementSibling)
 
 
-const listHeaders = document.querySelectorAll(".item h2");
+
 // console.log(listHeaders)
 // listHeaders.forEach((element) => {
 // console.log(element.nextElementSibling.children)
@@ -51,7 +51,7 @@ const listHeaders = document.querySelectorAll(".item h2");
 //   // для каждого заголовка ищем соседа (список) и выводим количество его елемеентов
 //   console.log(`Elements: ${element.nextElementSibling.children.length}`);
 // });
-
+const listHeaders = document.querySelectorAll(".item h2");
 listHeaders.forEach(function (element) {
     console.log(element)
     console.log(element.textContent)
