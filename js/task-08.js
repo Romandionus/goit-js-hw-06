@@ -8,3 +8,31 @@
 // 5. Выведи обьект с введенными данными в консоль и очисти значения полей формы методом reset.
 
 
+const form = document.querySelector(`form`)
+console.log(form)
+
+form.addEventListener(`submit`, onFormSubmit)
+const button = document.querySelector(`button`)
+console.dir(button)
+const input = document.querySelector(`input`)
+console.dir(input)
+
+function onFormSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget)
+    console.log(formData)
+    formData.forEach((value, name) => {
+        console.log(`значение свойства`, value)
+        console.log(`имя поля`, name)
+        alert(`Поля не должны быть пустыми!`)
+    })
+    
+// const formElements = event.currentTarget.elements;
+// console.dir(formElements)
+
+//     const mail = formElements.email.value;
+//     const passord = formElements.password.value;
+//     console.log(mail)
+//     console.log(passord)
+}
+
