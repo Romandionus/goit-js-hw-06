@@ -26,8 +26,8 @@ ingredients.forEach(ingredients => {
   const newLiElem = document.createElement(`li`);
   // console.log(newLiElem)
 newLiElem.textContent = `${ingredients}`
-  newLiElem.className = `item`
-
+  //так тоже работает newLiElem.className = `item`
+newLiElem.classList.add(`item`)
   addLiInUl.append(newLiElem);
   console.log(addLiInUl)
 });
