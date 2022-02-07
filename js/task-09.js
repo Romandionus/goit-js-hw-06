@@ -8,20 +8,15 @@ function getRandomHexColor() {
 
 const btnElem = document.querySelector(`button`)
 const body = document.querySelector(`body`)
-console.dir(body.style.backgroundColor)
+const span = document.querySelector(`span`)
 
+const wtf = btnElem.addEventListener(`click`, changeColor);
 
-const clickToChange = (event) => {
-  console.log(`нажми чтобы сделать магию`, event)
-  console.log(`type`, event.type)
-  console.log(`target`, event.currentTarger)
-  console.log(`не меняет цвет`)
+function changeColor() {
+  const newColor = getRandomHexColor();
+  body.style.backgroundColor = newColor;
+  console.log(newColor)
 }
-const wtf = btnElem.addEventListener(`click`, clickToChange);
 
 
-// if (wtf !== true) {
-// body.style.backgroundColor(grey)
-// } else {
-//   console.log(`не работает`)
-// }
+
