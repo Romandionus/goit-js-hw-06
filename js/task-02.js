@@ -13,10 +13,11 @@ const ingredients = [
 ];
 
 const addLiInUl = document.querySelector(`#ingredients`)
-ingredients.map((element) => {
+const liElement = ingredients.map((element) => {
   const newLiElem = document.createElement(`li`);
   newLiElem.textContent = element;
   newLiElem.classList.add(`item`)
-  addLiInUl.append(newLiElem);
+  return newLiElem
   });
 
+addLiInUl.append(...liElement);

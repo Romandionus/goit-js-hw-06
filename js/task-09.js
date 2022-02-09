@@ -1,4 +1,4 @@
-// менять цвет body через инлайн тиль по клике на кнопке
+// менять цвет body через инлайн тиль по клике на кнопке и выводит значение цвета в span.color.
 // вывести в консоль цвет 
 
 
@@ -16,6 +16,7 @@ function changeColor() {
   const newColor = getRandomHexColor();
   body.style.backgroundColor = newColor;
   console.log(newColor)
+  span.textContent = newColor
 }
 
 
